@@ -64,6 +64,9 @@ X(m,i)는 i번째 대상의 m번째 point cloud이다.
 
 RGB의 채널은 강한 correlation 을 가지고있는데 이는 서로 상관관계가 높다는 뜻이다. 
 이를 Gausian image matrix 를 곱해 YUV 채널로 만들어주자 ( Decompose 가 된다)
+
+
+
 <img width="463" alt="스크린샷 2021-07-30 오전 2 29 48" src="https://user-images.githubusercontent.com/76778082/127537807-e666d808-35a5-4b39-82e5-767a33d35065.png">
 
 ### Feature extraction
