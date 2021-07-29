@@ -86,7 +86,7 @@ Sobel Detector 란?
 
 음.. 여기서 글로표현하기란 애매하니까 발표자료의 스크린샷으로 대체함.
 
-![소벨](img width="463 src=https://user-images.githubusercontent.com/76778082/127538728-9528b9cf-f141-4eb6-9fec-e1b70f593157.jpeg)
+<img width="463" src=https://user-images.githubusercontent.com/76778082/127538728-9528b9cf-f141-4eb6-9fec-e1b70f593157.jpeg>
 
 글씨는 양해부탁드립니다..
 
@@ -98,7 +98,7 @@ Sobel Detector 란?
 미분해서 그래프 그려봐도 1/e 에서 global minimum 을 가지는거밖에 체크할수가없다. 무슨의미인지모르겠다.
 
 
-![image](img width=463 src=https://user-images.githubusercontent.com/76778082/127540428-d11808fd-f4f1-46f3-aec3-1158dea28350.png)
+<img width="463" src=https://user-images.githubusercontent.com/76778082/127540428-d11808fd-f4f1-46f3-aec3-1158dea28350.png>
 
 
 ### 다음 스크린샷은 KL 쿨백 라이블러 divergence 와 옌센에 대한 식인데
