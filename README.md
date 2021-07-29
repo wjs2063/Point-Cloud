@@ -1,5 +1,5 @@
 # PCCdata
-
+##### 실행환경 COLAB
 ## Super Resolution업무관련 학부연구생 업무
 
 ### Point Cloud 일명 PCC 3D 자료를 2D로 Projection 한 결과를 yuv 파일로 변형후 super resolution 모델로 PSNR 측정한다
