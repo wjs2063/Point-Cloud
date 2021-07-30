@@ -7,7 +7,7 @@
 맡은 업무: 기본 keras tutorial model로 Projection 한 결과의 PSNR 측정, 그리고 UNET 의 구조를 적용한후 PSNR 측정후 정리 + 논문리뷰 이다.
 
 
-## 업무관련 진행방법 및 
+## 업무관련 진행사항 요약 및 
 
 ### Point Cloud 일명 PCC 3D 자료를 2D로 Projection 한 결과를 yuv 파일로 변형후 super resolution 모델로 PSNR 측정한다
 
