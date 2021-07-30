@@ -1,6 +1,13 @@
 # PCCdata
 ##### 실행환경 COLAB
 ## Super Resolution업무관련 학부연구생 업무
+주제: Point Cloud Perceptual quality 
+3D 입체 데이터를 2D로 변환시킨자료를 어떻게 평가할것인가?와 품질을 어떻게 높일수있는가? 이다
+
+맡은 업무: 기본 keras tutorial model로 Projection 한 결과의 PSNR 측정, 그리고 UNET 의 구조를 적용한후 PSNR 측정후 정리 + 논문리뷰 이다.
+
+
+## 업무관련 진행방법 및 
 
 ### Point Cloud 일명 PCC 3D 자료를 2D로 Projection 한 결과를 yuv 파일로 변형후 super resolution 모델로 PSNR 측정한다
 
