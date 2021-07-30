@@ -41,7 +41,7 @@ PCC 의 distortion 의 원인은 geometry, photometric attributes 에있다.
 
 ### 이들의 방식은 3D 를 육면체 안에 담는다.
 
-그리고 3D 를 각 육면체에 Projection 시킨다(정사영시킨다) 
+그리고 3D 를 6 Projection 시킨다(정사영시킨다) 
 그러면 6개의 projection 된 결과가 나오게되는데 이것은 2D 이므로 계산하기 수월해진다
 
 우리는 대부분 2D로 다루는것을 좋아하기때문이다,
