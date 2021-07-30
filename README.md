@@ -17,8 +17,60 @@
 3. 변환된 파일을 excel로 저장한다.
 4. 제출
 
-
 ### 아주 간단한 CNN 모델을 적용하였지만 추후에는  U NET ,RES NET 을 적용할것임.
+
+## 2020-04 Subpixel 을 활용한 superresolution 코드 설명
+```
+crop_size=300
+upscale_factor=3
+input_size=crop_size//upscale_factor
+batch_size=8
+
+train_ds=image_dataset_from_directory(
+    base_dir,
+    batch_size=batch_size,
+    image_size=(crop_size,crop_size),
+    validation_split=0.2,
+    subset="training",
+    seed=1337,
+    label_mode=None,
+    color_mode='rgb',
+
+
+)
+valid_ds=image_dataset_from_directory(
+    base_dir,
+    batch_size=batch_size,
+    image_size=(crop_size,crop_size),
+    validation_split=0.2,
+    subset="validation",
+    seed=1337,
+    label_mode=None,
+    color_mode='rgb',
+    
+      
+)
+    
+
+    
+    
+        
+
+
+def scaling(input_image):
+    input_image=input_image/255.0
+    return input_image
+train_ds=train_ds.map(scaling)
+valid_ds=train_ds.map(scaling)
+```
+
+해당 tutorial 모델에서는 url 에서 불러오는 방식을 선택하게된다. 하지만 local directory 에서 불러오게된다면?
+오류가뜬다.
+이유는 url 에서불러오게되면 자동으로 디렉토리가만들어지는데 상위 디렉토리 -> 하위디렉토리1->하위디렉토리1의 하위디렉토리에 image 들이 저장되어있어야한다. 이 구조를 꼭 지켜주어야함.
+이 구조만 지켜준다면 이후 코드실행은 문제없이 구동될것이다
+
+
+
 
 
 
