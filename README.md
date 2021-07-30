@@ -57,6 +57,14 @@ def scaling(input_image):
 train_ds=train_ds.map(scaling)
 valid_ds=train_ds.map(scaling)
 ```
+
+해당 tutorial 모델에서는 url 에서 불러오는 방식을 선택하게된다. 하지만 local directory 에서 불러오게된다면?
+오류가뜬다.
+이유는 url 에서불러오게되면 자동으로 디렉토리가만들어지는데 상위 디렉토리 -> 하위디렉토리1->하위디렉토리1의 하위디렉토리에 image 들이 저장되어있어야한다. 이 구조를 꼭 지켜주어야함.
+이 구조만 지켜준다면 이후 코드실행은 문제없이 구동될것이다
+
+
+
 ## Build model
 ```
 def get_model(upscale_factor=3, channels=1):
@@ -74,16 +82,22 @@ def get_model(upscale_factor=3, channels=1):
 
     return keras.Model(inputs, outputs)
 ```
-## 
+## Compile and train
+
+```
+epochs = 100
+
+model.compile(
+    optimizer=optimizer, loss=loss_fn,
+)
+
+model.fit(
+    train_ds, epochs=epochs, callbacks=callbacks, validation_data=valid_ds, verbose=2
+)
 
 
-해당 tutorial 모델에서는 url 에서 불러오는 방식을 선택하게된다. 하지만 local directory 에서 불러오게된다면?
-오류가뜬다.
-이유는 url 에서불러오게되면 자동으로 디렉토리가만들어지는데 상위 디렉토리 -> 하위디렉토리1->하위디렉토리1의 하위디렉토리에 image 들이 저장되어있어야한다. 이 구조를 꼭 지켜주어야함.
-이 구조만 지켜준다면 이후 코드실행은 문제없이 구동될것이다
-
-
-
+model.load_weights(checkpoint_filepath)
+```
 
 
 
