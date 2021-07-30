@@ -58,7 +58,7 @@ X(m,i)는 i번째 대상의 m번째 point cloud이다.
 해당 논문에서는 min을 1 max 를 10으로 사용하였다.
 
 
-## Why Do we have to conver RGB to YUV ???
+## Why Do we have to convert RGB to YUV ???
 
 이에대한 답변은 간단하다.
 
