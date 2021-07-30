@@ -1,6 +1,6 @@
 # PCCdata
 ##### 실행환경 COLAB
-## Super Resolution업무관련 학부연구생 업무
+## Point cloud Super Resolution 학부연구생 업무
 주제: Point Cloud Perceptual quality 
 3D 입체 데이터를 2D로 변환시킨자료를 어떻게 평가할것인가?와 품질을 어떻게 높일수있는가? 이다
 
