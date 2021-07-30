@@ -50,19 +50,32 @@ valid_ds=image_dataset_from_directory(
     
       
 )
-    
-
-    
-    
-        
-
-
+   
 def scaling(input_image):
     input_image=input_image/255.0
     return input_image
 train_ds=train_ds.map(scaling)
 valid_ds=train_ds.map(scaling)
 ```
+## Build model
+```
+def get_model(upscale_factor=3, channels=1):
+    conv_args = {
+        "activation": "relu",
+        "kernel_initializer": "Orthogonal",
+        "padding": "same",
+    }
+    inputs = keras.Input(shape=(None, None, channels))
+    x = layers.Conv2D(64, 5, **conv_args)(inputs)
+    x = layers.Conv2D(128, 3, **conv_args)(x)
+    x = layers.Conv2D(32, 3, **conv_args)(x)
+    x = layers.Conv2D(channels * (upscale_factor ** 2), 3, **conv_args)(x)
+    outputs = tf.nn.depth_to_space(x, upscale_factor)
+
+    return keras.Model(inputs, outputs)
+```
+## 
+
 
 해당 tutorial 모델에서는 url 에서 불러오는 방식을 선택하게된다. 하지만 local directory 에서 불러오게된다면?
 오류가뜬다.
