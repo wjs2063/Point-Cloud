@@ -112,18 +112,18 @@ model.load_weights(checkpoint_filepath)
 배경: 기존 Point Cloud 는 point to point (p2point) , point to plane (p2plane),point to mesh(p2mesh)
 는 euclidean distance 를 metric 으로 사용하게되는데 이는 오류가많다. 단순 거리의로 계산하므로 실제 사람이 보는 지표와는 거리가 멀다.
 
-따라서 방법이 필요하다.
-
 MPEG,JPEG 연구회에서 많은 연구를 하고있지만 뚜렷한 성과가없다.
+
+따라서 새로운 방법이 필요하다.
 
 PCC 의 distortion 의 원인은 geometry, photometric attributes 에있다.
 
 ### 이들의 방식은 3D 를 육면체 안에 담는다.
 
-그리고 3D 를 6 Projection 시킨다(정사영시킨다) 
+그리고 3D 를 6개의면에  Projection 시킨다(정사영시킨다) 
 그러면 6개의 projection 된 결과가 나오게되는데 이것은 2D 이므로 계산하기 수월해진다
 
-우리는 대부분 2D로 다루는것을 좋아하기때문이다,
+우리는 대부분 2D로 다루는것을 좋아하기때문이다,( 2D로 변환하면 적용하기 편해짐)
 
 
 ### Data processing
