@@ -174,14 +174,13 @@ Sobel Detector 란?
 
 <img width="463" src=https://user-images.githubusercontent.com/76778082/127538728-9528b9cf-f141-4eb6-9fec-e1b70f593157.jpeg>
 
-글씨는 양해부탁드립니다..
+
 
 <img width="463" alt="스크린샷 2021-07-30 오전 2 37 14" src="https://user-images.githubusercontent.com/76778082/127538854-a6b1fbf5-7c28-4b4f-a37c-3a0eb354797b.png">
 
 
-이식에대한 의미는 정확히 모르겠으나 확률*log(확률) 이므로  xlogx 로 바꿔생각해볼수있다. 
-즉 -log( 적분 xlogx dx) 정도인데  log 함수 특성상 0에 가까이가면 빠르게줄어든다. 그러한특성을 반영한게 아닐까 싶다.
-미분해서 그래프 그려봐도 1/e 에서 global minimum 을 가지는거밖에 체크할수가없다. 무슨의미인지모르겠다.
+I=1/P  정보량과 확률의 관계이다.  여기서 -x*log(p(x)) 는 x *log(1/p) 로 볼수있는데 이것은 결국  엔트로피 값을 나타내게 된다
+해당 확률변수가 지니는 평균적인 불확실성의 정도이다.
 
 
 <img width="463" src=https://user-images.githubusercontent.com/76778082/127540428-d11808fd-f4f1-46f3-aec3-1158dea28350.png>
